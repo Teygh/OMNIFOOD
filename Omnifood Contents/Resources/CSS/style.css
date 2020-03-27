@@ -1,0 +1,242 @@
+*{
+  /* This Declaration on top applies to the whole document (webpage)
+Basically by setting the margin and the padding to Zero we have removed all the defaults
+*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* tells the browser to account for any border and padding in the values you specify for an element's width and height. If you set an element's width to 100 pixels, that 100 pixels will include any border or padding you added, and the content box will shrink to absorb that extra width. This typically makes it much easier to size elements.*/
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: 'Lato','Arial', 'sans-serif';
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  /*CSS property provides information to the rendering engine about what to optimize for when rendering text.*/
+  /*The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.*/
+
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+
+/*------------HEADER----------------*/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+  background-size: cover; /* sets the size of the element's background image. Scales the image as large as possible without stretching the image. If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains. */
+  background-position: center; /* This will center the image on the page*/
+
+  height: 100vh; /*100vh fills up the whole view */
+
+}
+
+/* With the following code we re trying to get the header Absolutely in the middle of the page*/
+.hero-text-box {
+  position: absolute; /* It allows us to take elements out of the normal layout flow, and make them behave differently. Absolute: we can have it pop up anywhere we need*/
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+border-bottom: 2px solid #e67e22;
+
+}
+
+/*---- Features ----------------------------------------------------*/
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+
+/*---- MEALS ----------------------------------------------------*/
+
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style:none; /*No Bullet Point*/
+  width: 100%; /*Use the whole width of the browser*/
+
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+
+}
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden; /* The Image will not overflow the container */
+  background: black;
+}
+
+.meal-photo img {
+  opacity: 0.7; /*It sets the transparency level for the element */
+  width: 100%;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/*---- HEADING ----------------------------------------------------*/
+
+h1, 
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3{
+  font-size: 105%;
+  margin-bottom: 15px;
+}
+
+/*---- PARAGRAPHS ----------------------------------------------------*/
+
+.long-copy {
+  line-height: 140%;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 2%;
+}
+
+.box p{
+  font-size: 90%;
+  line-height: 145%;
+  text-align: justify;
+}
+
+/*---- ICONS ----------------------------------------------------*/
+.icon-big {
+  font-size: 200%;
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+/*---- BUTTONS ----------------------------------------------------*/
+.btn:link, 
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  
+}
+
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22 ;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22 ;
+  color: #e67e22;
+}
+.btn:hover,
+.btn:active{
+  background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #cf6d17 ;
+}
+
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17 ;
+  color: #fff;
+}
+
